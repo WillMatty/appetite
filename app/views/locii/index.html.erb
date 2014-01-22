@@ -5,9 +5,13 @@
     <h2>London's best places</h2>
   </header>
 
+  <form action="/" method="get" accept-charset="utf-8">
+    <input type="text" name="location">
+  </form>
+
   <ul>
     <% @locii.each do |loc| %>
-      <li data-lat="<%= loc.lat %>" data-lng="<%= loc.long %>">
+      <li data-lat=<%= loc.lat %> data-lng=<%= loc.long %>>
           <h3><%= loc.place %></h3>
           <p><%= loc.address %></p>
       </li>

@@ -1,6 +1,17 @@
 class LociiController < ApplicationController
   def index
-    @locii = Locus.all
+    # @locii = Locus.near("London")
+
+    # If the user has searched fore a location
+    # search near the param they typed in
+    # else show all the places near London.
+    # The param they've searched for is params[:location]
+
+    if params[:location].present?
+      @locii = Locus.near(:location)
+    else
+      @locii = Locus.near('London')
+    end
   end
 
   def new
@@ -11,8 +22,6 @@ class LociiController < ApplicationController
     @locus = Locus.new(locus_params)
 
     if @locus.save
-      flash[:success] = "You submitted a new place!"
-
       redirect_to root_path
     else
       render 'new'
@@ -23,6 +32,6 @@ class LociiController < ApplicationController
   private
 
   def locus_params
-    params.require(:locus).permit(:place, :address, :lat, :long)
+    params.require(:locus).permit(:place, :address)
   end
 end
