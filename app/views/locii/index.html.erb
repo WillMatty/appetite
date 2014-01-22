@@ -16,7 +16,7 @@
           <p><%= loc.address %></p>
 
           <% if params[:location].present? %>
-            <p><%= loc.distance_to(params[:location]) %>km away</p>
+            <p><%= loc.distance_to(params[:location]).round(1) %>km away</p>
           <% end -%>
 
       </li>
