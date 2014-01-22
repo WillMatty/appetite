@@ -7,7 +7,7 @@
 
   <ul>
     <% @locii.each do |loc| %>
-      <li data-lat=<%= loc.lat %> data-lng=<%= loc.long %>>
+      <li data-lat="<%= loc.lat %>" data-lng="<%= loc.long %>">
           <h3><%= loc.place %></h3>
           <p><%= loc.address %></p>
       </li>
