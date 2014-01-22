@@ -4,7 +4,7 @@ class Locus < ActiveRecord::Base
 
   after_validation :geocode
 
-  validates :title, presence: true
+  validates :place, presence: true
   validates :address, presence: true
 
 end
