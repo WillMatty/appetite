@@ -8,7 +8,7 @@ class LociiController < ApplicationController
     # The param they've searched for is params[:location]
 
     if params[:location].present?
-      @locii = Locus.near(:location)
+      @locii = Locus.near(params[:location])
     else
       @locii = Locus.near('London')
     end

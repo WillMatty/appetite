@@ -14,6 +14,11 @@
       <li data-lat=<%= loc.lat %> data-lng=<%= loc.long %>>
           <h3><%= loc.place %></h3>
           <p><%= loc.address %></p>
+
+          <% if params[:location].present? %>
+            <p><%= loc.distance_to(params[:location]) %>km away</p>
+          <% end -%>
+
       </li>
     <% end %>
   </ul>
