@@ -1,0 +1,23 @@
+<section id="info">
+
+  <header>
+    <h1><a href="#">Appetite</a></h1>
+    <h2>London's best places</h2>
+  </header>
+
+  <ul>
+    <% @locii.each do |loc| %>
+      <li data-lat=<%= loc.lat %> data-lng=<%= loc.long %>>
+          <h3><%= loc.place %></h3>
+          <p><%= loc.address %></p>
+      </li>
+    <% end %>
+  </ul>
+
+
+</section>
+
+<section id="map"></section>
+
+<%= link_to 'Add a location', new_locus_path, class: 'button' %>
+  

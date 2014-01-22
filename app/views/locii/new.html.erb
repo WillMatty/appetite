@@ -1,0 +1,12 @@
+<h3>Add a new place</h3>
+
+<%= simple_form_for @locus do |f| %>
+  
+  <%= f.input :place, label: 'Place name' %>
+  <%= f.input :address, label: 'Address' %>
+  <%= f.input :lat, label: 'Latitude' %>
+  <%= f.input :long, label: 'Longitude' %>
+
+  <%= f.button :submit, 'Submit' %>
+
+<% end -%>

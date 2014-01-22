@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140122151758) do
 
-  create_table "locus", force: true do |t|
+  create_table "locii", force: true do |t|
     t.string   "place"
     t.string   "address"
     t.float    "lat"

@@ -113,6 +113,22 @@ li h3 {
 }
 
 
+div.button {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+
+	background: #ea6363;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	color: white;
+
+	text-decoration: none;
+	padding: 5px 7px;
+
+	font-size: 14px;
+  	border-radius: 5px;
+	-webkit-appearance: none;
+}
 
 
 a.button {
