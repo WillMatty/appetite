@@ -19,6 +19,8 @@
             <p><%= loc.distance_to(params[:location]).round(1) %>km away</p>
           <% end -%>
 
+          <%= link_to 'Delete', locus_path(loc), method: :delete, confirm: 'Are you sure?' %>
+
       </li>
     <% end %>
   </ul>

@@ -29,6 +29,14 @@ class LociiController < ApplicationController
 
   end
 
+  def destroy
+    @locus = Locus.find(params[:id])
+
+    @locus.destroy
+
+    redirect_to root_path
+  end
+
   private
 
   def locus_params
